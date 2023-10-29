@@ -1,3 +1,3 @@
-/*с помощью функции DISTRICT мы сортируем объекты пао афавиту, а используя LIMIT выводим только 10 первых элементов*/
+/*делаем выборку по 10 фамилиям упорядочниваем их по алфавиту(ORDER BY) без повторов(DISTINCT)*/
 USE cd;
-SELECT DISTINCT surname FROM members ORDER BY surname LIMIT 10;
+SELECT DISTINCT surname FROM members WHERE memid>0 AND memid<12 ORDER BY surname;

@@ -1,5 +1,7 @@
-/*создаём новый столбец, называем его "расположение" и в нём указываем то, откуда был взят объект, после объединяем две таблицы через UNION*/
+/*делаем объединие по именам членов клуба и названиям объектов.
+первый столбец отвечает за объединие имен членов клуба и названия объектов.
+Второй столбец отвечает за то, откуда были взяты они(из members или facilities).*/
 USE cd;
-SELECT firstname AS 'объединение'  FROM members
-UNION
-SELECT facility AS 'объект' FROM facilities;
+SELECT firstname AS "union", "member" AS "members/facilies" FROM members WHERE firstname !="GUEST"
+UNION ALL
+SELECT facility, "facility" AS "members/facilies" FROM facilities;
