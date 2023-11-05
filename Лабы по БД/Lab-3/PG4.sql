@@ -1,4 +1,5 @@
 -- Active: 1698134321747@@127.0.0.1@3306@cd
+/* Выберите всех членов клуба и членов, которые их рекомендовали, отсортировав их по имени и фамилии. */
 USE cd;
 SELECT m1.surname, m1.firstname, m2.surname, m2.firstname
 FROM members m1
