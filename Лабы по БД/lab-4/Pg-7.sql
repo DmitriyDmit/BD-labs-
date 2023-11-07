@@ -1,0 +1,7 @@
+-- Active: 1698134321747@@127.0.0.1@3306@cd
+USE cd;
+START TRANSACTION;
+DELETE FROM bookings;
+SELECT*FROM bookings;
+ROLLBACK;
+SELECT*FROM bookings;
