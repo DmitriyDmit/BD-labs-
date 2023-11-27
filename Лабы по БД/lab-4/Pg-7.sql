@@ -2,7 +2,8 @@
 # Создаем транзакцию, где полностью удаляем значения из bookings, затем отменяем изменения с помощью ROLLBACK
 USE cd;
 START TRANSACTION;
-DELETE*FROM bookings;
+DELETE FROM bookings;
 SELECT*FROM bookings;
 ROLLBACK;
 SELECT*FROM bookings;
+-- ВСЕХ  членов клуба которых не рекомендовали 
